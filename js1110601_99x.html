@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九九乘法表</title>
+    <style>
+        * {
+            margin: 0 ;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        table{
+            width:80vw;
+            border-collapse: collapse;
+        }
+        tr :nth-child(even){
+            color: red;
+        }
+        td{
+            border: 1px solid gray;
+            margin: 0 auto;
+        }
+
+
+        /* .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        } */
+    </style>
+</head>
+
+<body>
+    <script>
+        // let test = 24;
+        // let testStr = test.toString();
+        // console.log('testStr=>' + testStr);
+        // let testSrtChange = testStr.padStart(5, '0');
+        // console.log('補0 testStrChange=>' + testSrtChange);
+
+        document.write('<table>');
+        for (let i = 1; i <= 9; i++) {
+
+            document.write('<tr>');
+            // if (i % 2 == 0) {
+            //     document.write('<p class = "red">');
+            // } else if ((i % 2) == 1) {
+            //     document.write('<p class = "blue">');
+            // } else {
+            //     document.write('<p>');
+            // }
+
+            for (let j = 1; j <= 9; j++) {
+                let iStr = i.toString();
+                let jStr = j.toString();
+                let ijStr = (i * j).toString();
+                
+                // .padStart()補字元或數字
+                let iStrChange = iStr.padStart(2, '0');
+                let jStrChange = jStr.padStart(2, '0');
+                let ijStrChange = ijStr.padStart(2, '0');
+
+                // if(iStr.length == 1){
+                //     iStrChange = "&nbsp;&nbsp;" + iStrChange;
+                // }
+                // if(jStr.length == 1){
+                //     jStrChange = "&nbsp;&nbsp;" + jStrChange;
+                // }
+                if (ijStr.length == 1) {
+                    ijStrChange = "&nbsp;&nbsp;" + ijStr;
+                }
+
+                // console.log(iStr);
+                // console.log(jStr);
+                // document.write(`${i}*${j}=${i*j}&nbsp;&nbsp;&nbsp;&nbsp;`);
+
+                document.write('<td>');
+                document.write(`${jStrChange} * ${iStrChange} = ${ijStrChange}&nbsp;&nbsp;&nbsp;&nbsp;`);
+            }
+            // document.write('<p>');
+            document.write('</td>');
+        }
+        document.write('</tr>');
+        document.write('</table>');
+    </script>
+</body>
+
+</html>

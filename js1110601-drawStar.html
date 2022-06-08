@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drawStar for JS</title>
+</head>
+
+<body>
+    <script>
+        let max = prompt('請輸入最大星數: ');
+
+        // 一般印星星, 靠右從第一顆印到最大數
+        let star1 = '';
+        for (let s = 0; s < max; s++) {
+            star1 += '*';
+            document.write(`${star1} <br>`);
+        }
+
+        // 金字塔型星星
+        for (let s = 1; s <= max; s++) {
+            document.write(s);
+
+            // 印空格
+            for (let j = 1; j <= (max - 1); j++) {
+                document.write('&nbsp;&nbsp;');
+            }
+
+            // 星星
+            for (let k = 1; k <= (2 * s - 1); k++) {
+                document.write('*');
+            }
+
+            document.write('<br>');
+        }
+
+        // let input = 10;
+        // for (let i = 1; i <= input; i++) {
+        //     // console.log(i);
+        //     document.write(i);
+
+        //     // 空格
+        //     for (let j = 1; j <= (input - i); j++) {
+        //         // console.log(j);
+        //         // document.write('j');
+        //         document.write('&nbsp;&nbsp;');
+        //     }
+        //     // 空格 end
+
+        //     // 星星
+        //     for (let k = 1; k <= (2 * i - 1); k++) {
+        //         // document.write(k);
+        //         document.write('*');
+        //     }
+
+        //     // 星星 end
+        //     document.write('<br>');
+        // }
+        document.write('<br>');
+        document.write('<hr>');
+
+        // 畫菱形星星
+        // 上半部
+        for( let i =1; i<=max; i++){
+            // 空格
+            for( let j=1; j<= (max-1); j++){
+                document.write('&nbsp;&nbsp;');
+            }
+            // 星星
+            for(let k =1; k<=(i*2 -1); k++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+        // 下半部
+        for( i = max; i>1 ; i--){
+            // 空格
+            for( j=0; j<=(max-1); j++){
+                document.write('&nbsp;&nbsp;');
+            }
+            // 星星
+            for( k= (((i-1)*2)-1); k>0; k--){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>

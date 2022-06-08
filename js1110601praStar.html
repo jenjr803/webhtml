@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let input = prompt('請輸入星星行數: ');
+        // let input=5;
+        // for(let i = 0; i<5; i++){
+        //     document.write(i + '&nbsp;');
+        //     for(let j=input; j>i ; j--){
+        //         document.write(j);
+        //     }
+        //     document.write('<br>');
+        // }
+        //上半部
+        for(let i = 0;i<input;i++){
+            // 上空白
+            for(let j = (input-1);j>i;j--){
+                document.write("&nbsp&nbsp");
+            }
+            // 下星星
+            for(let k =0;k<(i*2+1);k++){
+            document.write("*");
+            }
+            document.write("<br>");
+        }
+        //下半部
+        for(let i = 0;i<(input-1);i++){
+            // 下空白
+            for(let j = 0;j<=i;j++){
+                document.write("&nbsp&nbsp");
+            }
+            // 下星星
+            for(let k =((input-1)*2-1);k>(i*2);k--){//再印星星
+            document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

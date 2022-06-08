@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let loveNum = 5;
+        // console.log('love number => ' + loveNum);
+
+        // switch(loveNum % 3){
+        //     case 1:
+        //         console.log('1 4 7 圖書館A時段');
+        //         break;
+        //     case 2:
+        //         console.log('2 4 6 圖書館B時段');
+        //         break;
+        //     case 0:
+        //         console.log('3 6 9 圖書館B時段');
+        //         break;
+        //     default:
+        //         break;
+        // }
+        alert('此為JS疊加程式練習')
+        let max = prompt('請輸入疊加最大值: ');
+        // 宣告sum為0的數字
+        let sum = 0;
+        for (let i = 1; i < max; i++) {
+            sum = sum + i;
+            document.write(i, ' + ');
+            // console.log(i + '+');
+        }
+        // console.log( 10 + ' = ' + sum);
+        document.write(max, ' = ', sum);
+
+        document.write(`<br>`);
+        // 印星星
+        // 宣告star為初始空字串
+        let star = '';
+        for (let s = 0; s < max; s++) {
+            star += '*';
+            document.write(`${star} <br>`);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .container {
+            width: 100vh;
+        }
+
+        .col {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1 {
+            background-color: aqua;
+            width: 100%;
+            /* height: calc(60vh / 3); */
+        }
+
+        .box21 {
+            background-color: antiquewhite;
+            width: 30%;
+            /* height: calc(60vh / 3); */
+            float: left;
+        }
+        
+        .box22 {
+            background-color: aquamarine;
+            width: 50%;
+            float: left;
+            /* height: calc(60vh / 3); */
+        }
+
+        /* .box22::after{
+            content: "";
+        } */
+        .box23 {
+            background-color: blueviolet;
+            width: 20%;
+            float: right;
+        }
+
+        .box3 {
+            background-color: deeppink;
+            width: 100%;
+            /* height: calc(60vh / 3); */
+        }
+
+        .container::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="col box1">
+            <h1>header</h1>
+        </div>
+        <div class="col box21">
+            <h1>navigation</h1>
+        </div>
+        <div class="col box22">
+            <h1>content</h1>
+        </div>
+        <div class="col box23">
+            <h1>aside</h1>
+        </div>
+        <div class="col box3">
+            <h1>footer</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

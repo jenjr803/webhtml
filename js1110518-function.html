@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function hello() {
+            console.log('12345 log');
+            alert('12345');
+        }
+        hello();
+        hello();
+        hello();
+
+        function getMoneyFun() {
+            console.log('getMoneyFun');
+            let getMoney = parseInt(prompt('領多少錢?', 0));
+            console.log('領錢金額' + getMoney);
+            if (save >= getMoney) {
+                console.log('領錢成功!');
+                save = save - getMoney;
+                myString = myString + '提款金額: ' + getMoney + "\n";
+                // console.log('結餘存款=>' + save);
+            } else {
+                console.log('餘額不足, 無法領取提款金額!');
+            }
+            console.log('最終存款=>' + save);
+        }
+
+        function transferMoneyFun() {
+            console.log("transferMoneyFun");
+            let returnString = "2.轉帳\n"
+
+            let transferID = prompt('轉入帳號?', 0);
+            console.log('轉入帳號: ' + transferID);
+            //returnString = returnString
+            let transferMoney = parseInt(prompt('轉多少錢?', 0));
+            console.log('轉帳金額=>' + transferMoney);
+            if (save >= transferMoney) {
+                console.log('轉帳成功');
+                save = save - transferMoney;
+                myString = myString + '轉帳金額: ' + transferMoney + "\n";
+            } else {
+                console.log('餘額不足, 本次無法轉帳');
+            }
+            console.log('結餘存款=>' + save);
+        }
+
+        function saveMoneyFun() {
+            console.log("saveMoneyFun");
+            let saveMoney = parseInt(prompt('存多少錢?', 0));
+            console.log('存錢金額=>' + saveMoney);
+            if (saveMoney >= 0) {
+                console.log('成功存錢');
+                save = save + saveMoney;
+                myString = myString + '存款金額: ' + saveMoney + "\n";
+            } else {
+                console.log('金額錯誤');
+
+            }
+            console.log('最終存款=>' + save);
+        }
+
+
+        let myString = "";
+
+        let save = parseInt(prompt('目前存款金額?', 0));
+        console.log('存款: ' + save);
+        let action = parseInt(prompt('請輸入動作: 1.領錢 2.轉帳 3.存錢', 0));
+        console.log('動作: ' + action);
+
+        switch (action) {
+            case 1:
+                console.log('領錢中');
+                getMoneyFun();
+                break;
+
+            case 2:
+                console.log('轉帳中');
+                transferMoneyFun();
+                break;
+            case 3:
+                console.log('存款中');
+                saveMoneyFun();
+                break;
+
+            default:
+            break;
+
+        }
+
+
+
+        myString = myString + '最終存款: ' + save + "\n";
+
+        alert(myString);
+
+        // "\n"換行的意思
+    </script>
+</body>
+
+</html>

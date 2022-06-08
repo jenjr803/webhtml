@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // myString = '1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 \n';
+        let myString = "";
+        for (let i = 1; i < 5; i++) {
+            console.log(myString);
+            myString = `${i} => 1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 \n`;
+            if (i % 2 == 1) {
+                document.write("<p class='red'>");
+                document.write(myString + "變紅色" + "<br><br>");
+                document.write("</p class='red>");
+            } else {
+                document.write("<p>");
+                document.write(myString + "<br><br>");
+                document.write("</p>");
+            }
+        }
+        let x = 1;
+        let y = "abc";
+        console.log(x*y);
+
+        let emptyX = "";
+        let emptyY = 0;
+
+        // 判斷是否有值, 用length, 為0代表空值
+
+        if (emptyX.length > 0 ){
+            console.log(emptyX);
+        }
+
+        // 縮減多筆宣告
+        // let x =111;
+        //     y =222;
+        //     z =333;
+    </script>
+</body>
+
+</html>

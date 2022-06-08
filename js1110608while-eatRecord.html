@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 吃壽司紀錄1
+        // 30元一盤, 5分鐘吃一盤, 共帶3000元, 限時90分鐘
+        // 5:00 吃了1盤 剩2970元
+        // 10:00 吃了2盤 剩2940元
+        // ......
+        // 90:00 吃了?盤 剩?元
+
+        let num = 0;
+        let money = 3000;
+        let time = 5;
+        let food = 80;
+        let i = 1;
+        // while (time<=90){
+        //     money-=food;
+        //     let timeA = ((time-5).toString()).padStart(2, '0');
+        //     let timeB = (time.toString()).padStart(2, '0');
+        //     document.write(`${timeA}:00-${timeB}:00 吃了${i}盤 剩${money} <br>`);
+        //     i++;
+        //     time+=5;
+        // }
+
+        let k =0;
+        // 吃壽司紀錄2
+        // 00-30分鐘 每5分鐘吃一盤
+        // 31-60分鐘 每6分鐘吃一盤
+        // 61-90分鐘 每7分鏡吃一盤
+        while (time<=90){
+            money-=food;
+            if(time<30){
+                k = 5;
+              
+            }else if(time<60){
+                k = 6;
+              
+            }else{
+                k = 7
+                
+            }
+            let timeA = ((time-k).toString()).padStart(2, '0');
+            let timeB = (time.toString()).padStart(2, '0');
+            document.write(`${timeA}:00-${timeB}:00 吃了${i}盤 剩${money} <br>`);
+            time+=k;
+            i++;
+        }
+
+
+        // 吃壽司紀錄3
+        // 挑戰超過90分鐘, 您已成為傳說
+    
+
+    </script>
+</body>
+</html>

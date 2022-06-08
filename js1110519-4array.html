@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p id="result">
+    123456
+</p>
+<button type="button" id="myBtn">obj btn</button>
+
+    <script>
+        // array 宣告用中括
+        let myArr = [1,3,5,7,9];
+        console.log(myArr);
+        //obj
+        let student1 = {
+            name: "amy",
+            age: "18",
+            location: "taipei",
+        };
+console.log('student1', studend1);
+
+const result = document.getElementById('result');
+const mybtn = document.getElementById('myBtn');
+myBtn.addEventListener('click', function(){
+    result.innerText = `Hello ${student1.name} age: ${student1.age} from ${student1.location}`;
+});
+
+    </script>
+</body>
+</html>

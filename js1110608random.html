@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 大樂透1-49, 不能重複, 要防呆
+
+        // 求1到6的亂數整數
+        // let num = Math.floor(Math.random() * (6 - 1)) + 1;
+        // document.write(num);
+
+        let i = 1;
+        let lottery = []; //lottery內容為空值
+        while (lottery.length < 6) {
+            let num = Math.floor(Math.random() * 49 + 1);
+
+            // 判斷lottery內容是否重複
+            if (lottery.indexOf(num) < 0) {
+                // 把號碼推進lottery陣列
+                lottery.push(num);
+                document.write(`第${i}個號碼: ${num} <br>`);
+            }
+            i++; //顯示第幾個號碼
+        }
+        console.log(lottery);
+    </script>
+</body>
+
+</html>
