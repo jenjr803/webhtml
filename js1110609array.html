@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    
-    
+
+
     <!-- 
         <?php
         foreach($array as $key => $value){
@@ -50,19 +50,47 @@
         console.log(studentArr[2]);
         console.log(studentArr[3]);
 
-        let newStudentArr =[];
+        let newStudentArr = [];
 
+        // 逐一將studentArr內容存入newStudentArr
         studentArr.forEach(function (value, key) {
             console.log('studentArr foreach');
             console.log(key);
             console.log(value);
-            newStudentArr.push(value);
-
+            // html不存入newStudentArr
             // if (value != 'html'){
             //     newStudentArr.push(value);
             // }
+            newStudentArr.push(value);
         });
         console.log('newStudentArr', newStudentArr);
+
+        let taxi = ['55688', '168168', '日昇', 'uber'];
+        console.log('taxi:', taxi);
+        taxi.push('linetaxi');
+        console.log('newtaxi:', taxi);
+
+        const array1 = [1, 4, 9, 16];
+        console.log(array1);
+        // pass a function to map
+        const map1 = array1.map(x => x * 2);
+        console.log(map1);
+        // expected output: Array [2, 8, 18, 32]
+
+        let filterArr= [1,2,3,4,5,6,7,8];
+        let newFilter= [];
+        array.forEach(element => {
+            if (element%2==0){
+                newFilter.push(element);
+            }
+        });
+        console.log('filterArr:', filterArr);
+        console.log('newFilter:', newFilter);
+
+        let filterArr= [1,2,3,4,5,6,7,8];
+        let newFilter=filterArr.filter(function (value) {
+            return(value>=4);
+        });
 
     </script>
 </body>
