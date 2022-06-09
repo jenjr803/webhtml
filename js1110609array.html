@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    
+    <!-- 
+        <?php
+        foreach($array as $key => $value){
+            echo "$key <br>";
+            echo "$value <br>";
+        }
+        $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+        echo "Peter is " . $age['Peter'] . " years old.";
+    ?> -->
+    <script>
+        // php vs. javascript array?
+        // Index array can be assigned automatically. index(key) always starts at 0.
+        // Associative arrays are arrays that use named keys that you assign to them.
+        // Multidimensional Arrays store values with more than one key.
+        let myArr = [1, 2, 3, 4, 5];
+        let carArr = ["volvo", "BMW", "TESLA", "TOYOTA"];
+        console.log('carArr: ', carArr);
+        console.log(myArr);
+        for (let i = 0; i < carArr.length; i++) {
+            console.log(carArr[i]);
+        }
+        // element為省略key及value
+        carArr.forEach(element => {
+            console.log('hello, js foreach ');
+            console.log(element);
+        });
+        // 將element分成key及value
+        carArr.forEach((value, key) => {
+            console.log('hello, js foreach ');
+            console.log(key);
+            console.log(value);
+        });
+
+        let studentArr = ['js', 'php', 'html', 'css'];
+        console.log(studentArr[0]);
+        console.log(studentArr[1]);
+        console.log(studentArr[2]);
+        console.log(studentArr[3]);
+
+        let newStudentArr =[];
+
+        studentArr.forEach(function (value, key) {
+            console.log('studentArr foreach');
+            console.log(key);
+            console.log(value);
+            newStudentArr.push(value);
+
+            // if (value != 'html'){
+            //     newStudentArr.push(value);
+            // }
+        });
+        console.log('newStudentArr', newStudentArr);
+
+    </script>
+</body>
+
+</html>
